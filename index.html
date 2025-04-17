@@ -1,66 +1,50 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kenny Hosting - VPS Store</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pemesanan VPS Kenny Hosting</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="bg-container"></div>
+    <div class="container">
+        <header>
+            <h1>Pemesanan VPS Kenny Hosting</h1>
+        </header>
+        
+        <section class="order-form">
+            <h2>Form Pemesanan VPS</h2>
+            <form id="orderForm">
+                <label for="vpsName">Nama VPS:</label>
+                <input type="text" id="vpsName" name="vpsName" placeholder="Nama VPS" required>
 
-  <header>
-    <nav>
-      <div class="logo">Kenny Hosting</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#order">Order</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+                <label for="domain">Domain:</label>
+                <input type="text" id="domain" name="domain" placeholder="Domain" required>
 
-  <section id="home">
-    <div class="hero-container">
-      <h1>Fast and Reliable VPS Hosting</h1>
-      <p>Get your VPS in minutes with simple and automatic setup.</p>
-      <a href="#order" class="btn">Order Now</a>
+                <button type="submit">Order VPS</button>
+            </form>
+        </section>
+
+        <section class="payment-methods">
+            <h2>Metode Pembayaran</h2>
+            
+            <div class="payment-option">
+                <h3>Pembayaran dengan QRIS (H2H OrderKuota)</h3>
+                <img src="https://files.catbox.moe/zl8wv0.jpg" alt="QRIS OrderKuota" id="qris-image">
+                <p>Gunakan QRIS di atas untuk melakukan pembayaran</p>
+            </div>
+
+            <div class="payment-option">
+                <h3>Pembayaran dengan Dana</h3>
+                <p>Untuk pembayaran menggunakan Dana, transfer ke nomor <strong>081227480576</strong>.</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 Kenny Hosting - Semua hak dilindungi.</p>
+        </footer>
     </div>
-  </section>
 
-  <section id="order">
-    <div class="order-form">
-      <h2>Order Your VPS</h2>
-      <form id="orderForm">
-        <input type="text" id="nama" placeholder="Nama Lengkap" required />
-        <input type="text" id="wa" placeholder="Nomor WhatsApp (62xxxx)" required />
-        <input type="text" id="namavps" placeholder="Nama VPS (ex: kennyvps)" required />
-        <input type="text" id="domain" placeholder="Domain (ex: domainkamu.com)" required />
-        <select id="paket" required>
-          <option value="" disabled selected>Pilih Paket VPS</option>
-          <option value="Mini">Mini - Rp15.000</option>
-          <option value="Medium">Medium - Rp30.000</option>
-          <option value="Pro">Pro - Rp60.000</option>
-        </select>
-        <input type="text" id="promo" placeholder="Kode Promo (opsional)" />
-        <div id="total">Total: Rp0</div>
-        <button type="submit" class="btn">Pesan Sekarang</button>
-      </form>
-      <div class="payment-info">
-        <h3>Metode Pembayaran</h3>
-        <p>Transfer via DANA:</p>
-        <div class="rekening">0812-2748-0576 (a.n. Kenny Hosting)</div>
-        <p>Scan QRIS DANA:</p>
-        <img src="https://files.catbox.moe/zl8wv0.jpg" alt="QRIS DANA" />
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Kenny Hosting. All rights reserved.</p>
-  </footer>
-
-  <script src="assets/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
