@@ -1,109 +1,80 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kenny Hosting</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="container">
-    <h1>FUTURISTIC TECHNOLOGY</h1>
-    <p class="subtitle">Order now and experience the future of VPS hosting</p>
-    <button class="order-btn">ORDER NOW</button>
-
-    <div class="plans">
-      <div class="plan">
-        <h2>VPS PLAN 1</h2>
-        <p class="price">Rp150.000</p>
-        <ul>
-          <li>2 vCPU</li>
-          <li>4 GB RAM</li>
-          <li>80 GB SSD</li>
-          <li>1 TB Bandwidth</li>
-        </ul>
-        <button class="choose-btn" data-plan="VPS PLAN 1">CHOOSE PLAN</button>
+  <div class="navbar">
+    <div class="logo">KENNY HOSTING</div>
+    <a class="wa-icon" href="https://wa.me/6281227480576" target="_blank">WhatsApp</a>
+  </div>  <section class="hero">
+    <div class="hero-content">
+      <div>
+        <h2>FUTURISTIC TECHNOLOGY</h2>
+        <p>Order now and experience the future of VPS hosting</p>
+        <a class="order-btn" href="https://wa.me/6281227480576?text=Halo%20saya%20ingin%20order%20VPS">ORDER NOW</a>
       </div>
-      <div class="plan">
-        <h2>VPS PLAN 2</h2>
-        <p class="price">Rp250.000</p>
-        <ul>
-          <li>3 vCPU</li>
-          <li>6 GB RAM</li>
-          <li>120 GB SSD</li>
-          <li>2 TB Bandwidth</li>
-        </ul>
-        <button class="choose-btn" data-plan="VPS PLAN 2">CHOOSE PLAN</button>
-      </div>
-      <div class="plan">
-        <h2>VPS PLAN 3</h2>
-        <p class="price">Rp350.000</p>
-        <ul>
-          <li>4 vCPU</li>
-          <li>8 GB RAM</li>
-          <li>160 GB SSD</li>
-          <li>3 TB Bandwidth</li>
-        </ul>
-        <button class="choose-btn" data-plan="VPS PLAN 3">CHOOSE PLAN</button>
-      </div>
+      <div class="hero-image"></div>
     </div>
-
-    <div class="promo">
-      <h3>PROMO CODE</h3>
-      <input type="text" placeholder="Enter promo code" />
-      <button class="apply-btn">APPLY</button>
+  </section>  <section class="plans">
+    <div class="plan">
+      <h3>VPS PLAN 1</h3>
+      <div class="price">Rp150.000</div>
+      <ul>
+        <li>2 vCPU</li>
+        <li>4 GB RAM</li>
+        <li>80 GB SSD</li>
+        <li>1 TB Bandwidth</li>
+      </ul>
+      <a class="choose-btn" href="https://wa.me/6281227480576?text=Order%20VPS%20Plan%201">CHOOSE PLAN</a>
     </div>
-
-    <div class="notice">
-      Connected to Tripay automatic payment system.<br />
-      You will receive a WhatsApp notification after payment is successful.
+    <div class="plan">
+      <h3>VPS PLAN 2</h3>
+      <div class="price">Rp250.000</div>
+      <ul>
+        <li>3 vCPU</li>
+        <li>6 GB RAM</li>
+        <li>120 GB SSD</li>
+        <li>2 TB Bandwidth</li>
+      </ul>
+      <a class="choose-btn" href="https://wa.me/6281227480576?text=Order%20VPS%20Plan%202">CHOOSE PLAN</a>
     </div>
-  </main>
-
-  <!-- Popup Form -->
-  <div class="popup" id="popup">
-    <div class="popup-content">
-      <h3>Isi Data Pemesanan</h3>
-      <input type="text" id="name" placeholder="Nama Anda" required />
-      <input type="text" id="domain" placeholder="Domain yang diinginkan" required />
-      <input type="hidden" id="selectedPlan" />
-      <button id="submitOrder">Kirim ke WhatsApp</button>
-      <button id="closePopup">Batal</button>
+    <div class="plan">
+      <h3>VPS PLAN 3</h3>
+      <div class="price">Rp350.000</div>
+      <ul>
+        <li>4 vCPU</li>
+        <li>8 GB RAM</li>
+        <li>160 GB SSD</li>
+        <li>3 TB Bandwidth</li>
+      </ul>
+      <a class="choose-btn" href="https://wa.me/6281227480576?text=Order%20VPS%20Plan%203">CHOOSE PLAN</a>
     </div>
-  </div>
-
-  <script>
-    const buttons = document.querySelectorAll('.choose-btn');
-    const popup = document.getElementById('popup');
-    const selectedPlanInput = document.getElementById('selectedPlan');
-    const submitOrder = document.getElementById('submitOrder');
-    const closePopup = document.getElementById('closePopup');
-
-    buttons.forEach(button => {
-      button.addEventListener('click', () => {
-        selectedPlanInput.value = button.getAttribute('data-plan');
-        popup.style.display = 'flex';
-      });
-    });
-
-    submitOrder.addEventListener('click', () => {
-      const name = document.getElementById('name').value;
-      const domain = document.getElementById('domain').value;
-      const plan = selectedPlanInput.value;
-      if (!name || !domain) {
-        alert('Nama dan domain wajib diisi.');
-        return;
+  </section>  <section class="promo">
+    <h3>PROMO CODE</h3>
+    <input type="text" id="promoCode" placeholder="Enter your code">
+    <button class="apply-btn" onclick="applyPromo()">APPLY</button>
+    <div class="promo-message" id="promoMessage"></div>
+  </section>  <div class="notice">
+    Connected to Tripay automatic payment system.<br>
+    You will receive a WhatsApp notification after payment is successful.
+  </div>  <script>
+    function applyPromo() {
+      const code = document.getElementById('promoCode').value.trim();
+      const message = document.getElementById('promoMessage');
+      const promoSection = document.querySelector('.promo');
+      
+      if (code.toUpperCase() === 'KENNYDISKON50') {
+        message.textContent = 'Promo applied: Diskon 50% aktif!';
+        promoSection.classList.remove('error');
+        promoSection.classList.add('success');
+      } else {
+        message.textContent = 'Kode promo tidak valid.';
+        promoSection.classList.remove('success');
+        promoSection.classList.add('error');
       }
-
-      const message = encodeURIComponent(`Halo Admin, saya ingin order:\n\n${plan}\nNama: ${name}\nDomain: ${domain}`);
-      const waUrl = `https://wa.me/6281227480576?text=${message}`;
-      window.open(waUrl, '_blank');
-      popup.style.display = 'none';
-    });
-
-    closePopup.addEventListener('click', () => {
-      popup.style.display = 'none';
-    });
-  </script>
-</body>
+    }
+  </script></body>
 </html>
