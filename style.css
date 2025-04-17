@@ -1,203 +1,54 @@
-/* GENERAL STYLES */
-body {
-  margin: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: linear-gradient(to bottom, #0f172a, #4b0082);
-  color: white;
-  padding: 2rem;
-}
+/* style.css */
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  text-align: center;
-}
+body { margin: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: radial-gradient(circle at top, #1d1246, #0b0f2e); color: #fff; }
 
-/* HEADERS */
-h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-}
+.navbar { display: flex; justify-content: space-between; align-items: center; padding: 20px 40px; background: transparent; }
 
-.subtitle {
-  font-size: 1.2rem;
-  margin-bottom: 2rem;
-}
+.logo { font-size: 24px; font-weight: bold; color: #9db2ff; letter-spacing: 1px; }
 
-/* ORDER BUTTON */
-.order-btn {
-  background-color: #2563eb;
-  color: white;
-  padding: 0.75rem 2rem;
-  border: none;
-  border-radius: 1rem;
-  font-size: 1rem;
-  cursor: pointer;
-  margin-bottom: 3rem;
-  box-shadow: 0 0 10px #2563eb80;
-  transition: transform 0.2s ease;
-}
+.wa-icon { color: #00ffcc; text-decoration: none; font-weight: bold; }
 
-.order-btn:hover {
-  transform: scale(1.05);
-}
+.hero { display: flex; align-items: center; justify-content: center; padding: 60px 20px; background: linear-gradient(135deg, #2d1e72, #0e0833); position: relative; }
 
-/* VPS PLANS */
-.plans {
-  display: flex;
-  gap: 1.5rem;
-  justify-content: center;
-  flex-wrap: wrap;
-}
+.hero-content { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; max-width: 1200px; width: 100%; color: white; }
 
-.plan {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  width: 250px;
-  box-shadow: 0 0 10px #00000040;
-  transition: transform 0.2s ease;
-}
+.hero-content h2 { font-size: 48px; margin: 0; line-height: 1.2; }
 
-.plan:hover {
-  transform: translateY(-5px);
-}
+.hero-content p { font-size: 18px; margin: 20px 0; }
 
-.plan h2 {
-  font-size: 1.2rem;
-}
+.order-btn { display: inline-block; background: #2e58ff; padding: 12px 30px; border-radius: 12px; color: white; text-decoration: none; font-weight: bold; border: 2px solid #9abfff; box-shadow: 0 0 10px #4e7fff; transition: background 0.3s; }
 
-.price {
-  font-size: 1.5rem;
-  color: #60a5fa;
-  margin: 0.5rem 0 1rem 0;
-}
+.order-btn:hover { background: #426eff; }
 
-.plan ul {
-  list-style: none;
-  padding: 0;
-  margin-bottom: 1rem;
-  font-size: 0.9rem;
-}
+.hero-image { width: 400px; height: 400px; background: url('https://cdn-icons-png.flaticon.com/512/1048/1048953.png') no-repeat center; background-size: contain; }
 
-.plan ul li {
-  margin-bottom: 0.25rem;
-}
+.plans { display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; padding: 60px 20px; }
 
-/* CHOOSE PLAN BUTTON */
-.choose-btn {
-  background-color: #3b82f6;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border: none;
-  border-radius: 0.75rem;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 0 10px #3b82f680;
-  transition: transform 0.2s ease;
-}
+.plan { background: rgba(255, 255, 255, 0.05); border: 1px solid #4a56ff; border-radius: 16px; padding: 30px; width: 300px; box-shadow: 0 0 20px rgba(74, 86, 255, 0.4); transition: transform 0.3s; }
 
-.choose-btn:hover {
-  transform: scale(1.05);
-}
+.plan:hover { transform: translateY(-10px); }
 
-/* PROMO */
-.promo {
-  margin-top: 3rem;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  backdrop-filter: blur(10px);
-}
+.plan h3 { font-size: 24px; margin-bottom: 10px; }
 
-.promo input {
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  border: none;
-  margin-right: 0.5rem;
-  width: 200px;
-}
+.plan .price { font-size: 22px; color: #8ac7ff; margin: 10px 0; }
 
-.apply-btn {
-  background-color: #3b82f6;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-weight: bold;
-}
+.plan ul { list-style: none; padding: 0; margin: 0 0 20px; line-height: 1.8; font-size: 16px; }
 
-/* NOTICE */
-.notice {
-  margin-top: 2rem;
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 1rem;
-  font-size: 0.9rem;
-  backdrop-filter: blur(8px);
-  color: #ddd;
-}
+.choose-btn { display: inline-block; background: #2e58ff; color: white; text-decoration: none; padding: 10px 20px; border-radius: 10px; border: 2px solid #7aaeff; box-shadow: 0 0 10px #3c6fff; }
 
-/* POPUP FORM */
-.popup {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(15, 23, 42, 0.8);
-  display: none;
-  align-items: center;
-  justify-content: center;
-  z-index: 999;
-}
+.promo { margin: 40px auto; max-width: 500px; text-align: center; }
 
-.popup-content {
-  background: #1e293b;
-  padding: 2rem;
-  border-radius: 1rem;
-  width: 90%;
-  max-width: 400px;
-  text-align: center;
-  box-shadow: 0 0 20px #00000088;
-}
+.promo h3 { margin-bottom: 10px; font-size: 20px; }
 
-.popup-content h3 {
-  margin-bottom: 1rem;
-}
+.promo input { padding: 10px; width: 70%; border-radius: 10px; border: none; margin-bottom: 10px; outline: none; font-size: 16px; }
 
-.popup-content input {
-  width: 100%;
-  margin-bottom: 1rem;
-  padding: 0.75rem;
-  border: none;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  background: #334155;
-  color: white;
-}
+.apply-btn { background: #3d6cff; color: white; padding: 10px 20px; border: none; border-radius: 10px; cursor: pointer; font-weight: bold; margin-left: 10px; box-shadow: 0 0 10px #4a7fff; }
 
-.popup-content input::placeholder {
-  color: #cbd5e1;
-}
+.promo.success input { box-shadow: 0 0 10px #00ffcc; border: 2px solid #00ffcc; }
 
-.popup-content button {
-  padding: 0.5rem 1rem;
-  margin: 0.5rem;
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-weight: bold;
-}
+.promo.error input { box-shadow: 0 0 10px #ff1e1e; border: 2px solid #ff1e1e; }
 
-#submitOrder {
-  background: #3b82f6;
-  color: white;
-}
+.promo-message { margin-top: 8px; font-size: 14px; color: #ccc; }
 
-#closePopup {
-  background: #64748b;
-  color: white;
-}
+.notice { text-align: center; color: #ccc; font-size: 14px; padding: 20px; margin-top: 40px; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+
