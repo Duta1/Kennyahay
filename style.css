@@ -1,567 +1,203 @@
-/* Reset dan Font */
+/* GENERAL STYLES */
 body {
-    font-family: 'Montserrat', sans-serif; /* Font modern dan bersih */
-    margin: 0;
-    padding: 0;
-    background-color: #12182B; /* Latar belakang gelap futuristik */
-    color: #ECF0F1; /* Teks abu-abu muda */
-    line-height: 1.6;
-    overflow-x: hidden; /* Mencegah scroll horizontal */
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom, #0f172a, #4b0082);
+  color: white;
+  padding: 2rem;
 }
 
-/* Utility Classes */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
 }
 
-.section {
-    padding: 80px 0;
-}
-
-.bg-light {
-    background-color: #1E273D; /* Latar belakang section yang lebih terang */
-}
-
-.button {
-    display: inline-block;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
-}
-
-.button.primary {
-    background-color: #64FFDA; /* Warna aksen cerah */
-    color: #12182B;
-}
-
-.button.primary:hover {
-    background-color: #12182B;
-    color: #64FFDA;
-    border-color: #64FFDA;
-}
-
-.button.secondary {
-    background-color: transparent;
-    color: #64FFDA;
-    border-color: #64FFDA;
-}
-
-.button.secondary:hover {
-    background-color: #64FFDA;
-    color: #12182B;
-}
-
-/* Typography */
-h1, h2, h3 {
-    color: #64FFDA; /* Warna judul aksen */
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
+/* HEADERS */
 h1 {
-    font-size: 3em;
-    line-height: 1.2;
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
 }
 
-h2 {
-    font-size: 2.5em;
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
 }
 
-h3 {
-    font-size: 1.8em;
+/* ORDER BUTTON */
+.order-btn {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 10px #2563eb80;
+  transition: transform 0.2s ease;
 }
 
-p {
-    color: #ABB2BF; /* Teks paragraf abu-abu */
-    margin-bottom: 20px;
+.order-btn:hover {
+  transform: scale(1.05);
 }
 
-/* Header */
-header {
-    background-color: rgba(18, 24, 43, 0.9); /* Latar belakang header transparan */
-    color: #ECF0F1;
-    padding: 20px 0;
-    position: fixed;
-    width: 100%;
-    z-index: 100;
-    backdrop-filter: blur(10px); /* Efek blur untuk latar belakang */
-    border-bottom: 1px solid rgba(100, 255, 218, 0.1); /* Garis bawah tipis */
+/* VPS PLANS */
+.plans {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-header .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.plan {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  width: 250px;
+  box-shadow: 0 0 10px #00000040;
+  transition: transform 0.2s ease;
 }
 
-.logo a {
-    color: #64FFDA;
-    text-decoration: none;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.logo span {
-    color: #ECF0F1;
-}
-
-nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-nav li {
-    margin-left: 30px;
-}
-
-nav a {
-    color: #ABB2BF;
-    text-decoration: none;
-    transition: color 0.3s ease;
-    font-weight: 500;
-}
-
-nav a:hover {
-    color: #64FFDA;
-}
-
-nav .cta {
-    background-color: #64FFDA;
-    color: #12182B;
-    padding: 12px 25px;
-    border-radius: 8px;
-}
-
-nav .cta:hover {
-    background-color: #12182B;
-    color: #64FFDA;
-    border: 2px solid #64FFDA;
-}
-
-/* Hero Section */
-#hero {
-    background: linear-gradient(90deg, #12182B 0%, #1E273D 100%); /* Gradien dinamis */
-    color: #ECF0F1;
-    padding: 150px 0;
-    text-align: center;
-    position: relative;
-    overflow: hidden; /* Untuk efek partikel */
-}
-
-#hero .container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.hero-content {
-    flex: 1;
-    padding-right: 50px;
-    text-align: left;
-}
-
-.hero-content h1 {
-    font-size: 4em;
-    margin-bottom: 25px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    line-height: 1.8;
-    margin-bottom: 40px;
-}
-
-.hero-image {
-    flex: 1;
-}
-
-.hero-image img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
-}
-
-/* Paket Section */
-#paket {
-    padding: 100px 0;
-    text-align: center;
-    background-color: #1E273D;
-}
-
-#paket h2 {
-    margin-bottom: 50px;
-}
-
-.paket-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 40px;
-}
-
-.paket-card {
-    background-color: #2C3E50;
-    border-radius: 12px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-    padding: 40px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
-    border: 2px solid transparent;
-}
-
-.paket-card:hover {
-    transform: translateY(-8px);
-    border-color: #64FFDA;
-}
-
-.paket-card h3 {
-    font-size: 2em;
-    margin-bottom: 20px;
-}
-
-.harga {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #64FFDA;
-    margin-bottom: 30px;
-}
-
-.harga span {
-    font-size: 1em;
-    font-weight: normal;
-}
-
-.paket-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 30px;
-}
-
-.paket-card li {
-    padding: 10px 0;
-    border-bottom: 1px solid #34495E;
-}
-
-.paket-card li:last-child {
-    border-bottom: none;
-}
-
-.paket-card .button {
-    width: 80%;
-    margin-top: 20px;
-}
-
-.paket-card.featured {
-    background-color: #34495E;
-    transform: scale(1.05);
-    border-color: #64FFDA;
-}
-
-.paket-card.featured:hover {
-    transform: translateY(-8px) scale(1.05);
-}
-
-/* Fitur Section */
-#fitur {
-    padding: 100px 0;
-    text-align: center;
-    background-color: #12182B;
-}
-
-#fitur h2 {
-    margin-bottom: 50px;
-}
-
-.fitur-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 50px;
-}
+.plan:hover {
+  transform: translateY(-5px);
+}
 
-.fitur-item {
-    background-color: #1E273D;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    padding: 40px;
-    text-align: center;
-    transition: transform 0.3s ease-in-out;
+.plan h2 {
+  font-size: 1.2rem;
 }
 
-.fitur-item:hover {
-    transform: translateY(-5px);
+.price {
+  font-size: 1.5rem;
+  color: #60a5fa;
+  margin: 0.5rem 0 1rem 0;
 }
 
-.fitur-item .icon {
-    font-size: 3em;
-    color: #64FFDA;
-    margin-bottom: 20px;
+.plan ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
 }
 
-.fitur-item h3 {
-    font-size: 1.5em;
-    margin-bottom: 15px;
+.plan ul li {
+  margin-bottom: 0.25rem;
 }
 
-.fitur-item p {
-    color: #ABB2BF;
+/* CHOOSE PLAN BUTTON */
+.choose-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1.5rem;
+  border: none;
+  border-radius: 0.75rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 10px #3b82f680;
+  transition: transform 0.2s ease;
 }
 
-/* Pembayaran Section */
-#pembayaran {
-    padding: 100px 0;
-    text-align: center;
-    background-color: #1E273D;
+.choose-btn:hover {
+  transform: scale(1.05);
 }
 
-#pembayaran h2 {
-    margin-bottom: 40px;
+/* PROMO */
+.promo {
+  margin-top: 3rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
 }
 
-#pembayaran p {
-    font-size: 1.1em;
-    color: #ABB2BF;
-    margin-bottom: 30px;
+.promo input {
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: none;
+  margin-right: 0.5rem;
+  width: 200px;
+}
+
+.apply-btn {
+  background-color: #3b82f6;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* NOTICE */
+.notice {
+  margin-top: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  backdrop-filter: blur(8px);
+  color: #ddd;
+}
+
+/* POPUP FORM */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.popup-content {
+  background: #1e293b;
+  padding: 2rem;
+  border-radius: 1rem;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  box-shadow: 0 0 20px #00000088;
+}
+
+.popup-content h3 {
+  margin-bottom: 1rem;
+}
+
+.popup-content input {
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  background: #334155;
+  color: white;
+}
+
+.popup-content input::placeholder {
+  color: #cbd5e1;
+}
+
+.popup-content button {
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#submitOrder {
+  background: #3b82f6;
+  color: white;
+}
+
+#closePopup {
+  background: #64748b;
+  color: white;
 }
-
-.payment-options {
-    display: flex;
-    flex-direction: column;
-    max-width: 400px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: #2C3E50;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-}
-
-.payment-item {
-    margin-bottom: 20px;
-    text-align: left;
-}
-
-.payment-item label {
-    font-weight: bold;
-    margin-left: 10px;
-    cursor: pointer;
-    color: #ECF0F1;
-}
-
-.payment-item input[type="radio"] {
-    margin-right: 10px;
-}
-
-.payment-details {
-    margin-top: 15px;
-    padding: 20px;
-    background-color: #34495E;
-    border-radius: 8px;
-    font-size: 0.9em;
-    color: #ABB2BF;
-}
-
-.qrcode-container {
-    text-align: center;
-    margin-top: 15px;
-}
-
-.qrcode-container img {
-    max-width: 180px;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.qrcode-info {
-    font-size: 0.8em;
-    color: #777;
-    margin-top: 5px;
-}
-
-.small-button {
-    padding: 10px 20px;
-    font-size: 0.9em;
-}
-
-.payment-settings {
-    margin-top: 40px;
-    padding: 25px;
-    background-color: #2C3E50;
-    border-radius: 12px;
-    text-align: left;
-    font-size: 0.9em;
-}
-
-.payment-settings label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #ECF0F1;
-}
-
-.payment-settings input[type="text"] {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #34495E;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #1E273D;
-    color: #ABB2BF;
-}
-
-/* Kontak Section */
-#kontak {
-    padding: 100px 0;
-    text-align: center;
-    background-color: #12182B;
-}
-
-#kontak h2 {
-    margin-bottom: 40px;
-}
-
-#kontak p {
-    font-size: 1.1em;
-    color: #ABB2BF;
-    margin-bottom: 40px;
-}
-
-#kontak .admin-number {
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #64FFDA;
-    margin-bottom: 30px;
-}
-
-#kontak .admin-number a {
-    color: inherit;
-    text-decoration: none;
-}
-
-#kontak form {
-    max-width: 500px;
-    margin: 0 auto;
-    padding: 40px;
-    background-color: #1E273D;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-direction: column;
-}
-
-.form-group {
-    margin-bottom: 25px;
-    text-align: left;
-}
-
-.form-group label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: bold;
-    color: #ECF0F1;
-}
-
-.form-group input[type="text"],
-.form-group input[type="email"],
-.form-group textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #34495E;
-    border-radius: 5px;
-    box-sizing: border-box;
-    background-color: #2C3E50;
-    color: #ABB2BF;
-    font-size: 1em;
-}
-
-.form-group textarea {
-    resize: vertical;
-}
-
-#kontak button[type="submit"] {
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 1.1em;
-    font-weight: bold;
-    background-color: #64FFDA;
-    color: #12182B;
-    transition: background-color 0.3s ease;
-}
-
-#kontak button[type="submit"]:hover {
-    background-color: #12182B;
-    color: #64FFDA;
-    border: 2px solid #64FFDA;
-}
-
-/* Footer */
-footer {
-    background-color: #2C3E50;
-    color: #ABB2BF;
-    text-align: center;
-    padding: 30px 0;
-    font-size: 0.9em;
-    border-top: 1px solid #34495E;
-}
-
-footer .container {
-    max-width: 800px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        padding: 15px;
-    }
-
-    header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .logo {
-        margin-bottom: 15px;
-    }
-
-    nav ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    nav li {
-        margin: 15px 0;
-    }
-
-    #hero {
-        padding: 100px 0;
-    }
-
-    #hero .container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-content {
-        padding-right: 0;
-        margin-bottom: 40px;
-        text-align: center;
-    }
-
-    .hero-content h1 {
-        font-size: 3em;
-    }
-
-    .hero-image {
-        max-width: 80%;
-    }
-
-    .paket-grid {
-        grid-template-
