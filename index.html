@@ -1,80 +1,66 @@
-<!DOCTYPE html><html lang="en">
+<!DOCTYPE html>
+<html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kenny Hosting</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kenny Hosting - VPS Store</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
 </head>
 <body>
-  <div class="navbar">
-    <div class="logo">KENNY HOSTING</div>
-    <a class="wa-icon" href="https://wa.me/6281227480576" target="_blank">WhatsApp</a>
-  </div>  <section class="hero">
-    <div class="hero-content">
-      <div>
-        <h2>FUTURISTIC TECHNOLOGY</h2>
-        <p>Order now and experience the future of VPS hosting</p>
-        <a class="order-btn" href="https://wa.me/6281227480576?text=Halo%20saya%20ingin%20order%20VPS">ORDER NOW</a>
+  <div class="bg-container"></div>
+
+  <header>
+    <nav>
+      <div class="logo">Kenny Hosting</div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#order">Order</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home">
+    <div class="hero-container">
+      <h1>Fast and Reliable VPS Hosting</h1>
+      <p>Get your VPS in minutes with simple and automatic setup.</p>
+      <a href="#order" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <section id="order">
+    <div class="order-form">
+      <h2>Order Your VPS</h2>
+      <form id="orderForm">
+        <input type="text" id="nama" placeholder="Nama Lengkap" required />
+        <input type="text" id="wa" placeholder="Nomor WhatsApp (62xxxx)" required />
+        <input type="text" id="namavps" placeholder="Nama VPS (ex: kennyvps)" required />
+        <input type="text" id="domain" placeholder="Domain (ex: domainkamu.com)" required />
+        <select id="paket" required>
+          <option value="" disabled selected>Pilih Paket VPS</option>
+          <option value="Mini">Mini - Rp15.000</option>
+          <option value="Medium">Medium - Rp30.000</option>
+          <option value="Pro">Pro - Rp60.000</option>
+        </select>
+        <input type="text" id="promo" placeholder="Kode Promo (opsional)" />
+        <div id="total">Total: Rp0</div>
+        <button type="submit" class="btn">Pesan Sekarang</button>
+      </form>
+      <div class="payment-info">
+        <h3>Metode Pembayaran</h3>
+        <p>Transfer via DANA:</p>
+        <div class="rekening">0812-2748-0576 (a.n. Kenny Hosting)</div>
+        <p>Scan QRIS DANA:</p>
+        <img src="https://files.catbox.moe/zl8wv0.jpg" alt="QRIS DANA" />
       </div>
-      <div class="hero-image"></div>
     </div>
-  </section>  <section class="plans">
-    <div class="plan">
-      <h3>VPS PLAN 1</h3>
-      <div class="price">Rp150.000</div>
-      <ul>
-        <li>2 vCPU</li>
-        <li>4 GB RAM</li>
-        <li>80 GB SSD</li>
-        <li>1 TB Bandwidth</li>
-      </ul>
-      <a class="choose-btn" href="https://wa.me/6281227480576?text=Order%20VPS%20Plan%201">CHOOSE PLAN</a>
-    </div>
-    <div class="plan">
-      <h3>VPS PLAN 2</h3>
-      <div class="price">Rp250.000</div>
-      <ul>
-        <li>3 vCPU</li>
-        <li>6 GB RAM</li>
-        <li>120 GB SSD</li>
-        <li>2 TB Bandwidth</li>
-      </ul>
-      <a class="choose-btn" href="https://wa.me/6281227480576?text=Order%20VPS%20Plan%202">CHOOSE PLAN</a>
-    </div>
-    <div class="plan">
-      <h3>VPS PLAN 3</h3>
-      <div class="price">Rp350.000</div>
-      <ul>
-        <li>4 vCPU</li>
-        <li>8 GB RAM</li>
-        <li>160 GB SSD</li>
-        <li>3 TB Bandwidth</li>
-      </ul>
-      <a class="choose-btn" href="https://wa.me/6281227480576?text=Order%20VPS%20Plan%203">CHOOSE PLAN</a>
-    </div>
-  </section>  <section class="promo">
-    <h3>PROMO CODE</h3>
-    <input type="text" id="promoCode" placeholder="Enter your code">
-    <button class="apply-btn" onclick="applyPromo()">APPLY</button>
-    <div class="promo-message" id="promoMessage"></div>
-  </section>  <div class="notice">
-    Connected to Tripay automatic payment system.<br>
-    You will receive a WhatsApp notification after payment is successful.
-  </div>  <script>
-    function applyPromo() {
-      const code = document.getElementById('promoCode').value.trim();
-      const message = document.getElementById('promoMessage');
-      const promoSection = document.querySelector('.promo');
-      
-      if (code.toUpperCase() === 'KENNYDISKON50') {
-        message.textContent = 'Promo applied: Diskon 50% aktif!';
-        promoSection.classList.remove('error');
-        promoSection.classList.add('success');
-      } else {
-        message.textContent = 'Kode promo tidak valid.';
-        promoSection.classList.remove('success');
-        promoSection.classList.add('error');
-      }
-    }
-  </script></body>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Kenny Hosting. All rights reserved.</p>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
 </html>
