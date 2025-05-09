@@ -2,65 +2,23 @@
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kenny Hosting - VPS Store</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kenang-Kenangan</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <div class="bg-container"></div>
-
-  <header>
-    <nav>
-      <div class="logo">Kenny Hosting</div>
-      <ul class="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#order">Order</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <section id="home">
-    <div class="hero-container">
-      <h1>Fast and Reliable VPS Hosting</h1>
-      <p>Get your VPS in minutes with simple and automatic setup.</p>
-      <a href="#order" class="btn">Order Now</a>
+  <div class="container">
+    <h1 class="title">Kenang-Kenangan</h1>
+    <button id="showMemory" class="show-button">Pencet Tombol Ini untuk Melihat Kenang-Kenangan</button>
+    <div id="heartEffect" class="heart-effect"></div>
+    <!-- Bagian kenangan dan video yang akan muncul -->
+    <div id="memoryContent" class="hidden memory-box">
+      <video id="memoryVideo" class="video-box" controls autoplay loop>
+        <source src="https://files.catbox.moe/t05dfn.mp4" type="video/mp4">
+        Browser kamu tidak mendukung video.
+      </video>
     </div>
-  </section>
-
-  <section id="order">
-    <div class="order-form">
-      <h2>Order Your VPS</h2>
-      <form id="orderForm">
-        <input type="text" id="nama" placeholder="Nama Lengkap" required />
-        <input type="text" id="wa" placeholder="Nomor WhatsApp (62xxxx)" required />
-        <input type="text" id="namavps" placeholder="Nama VPS (ex: kennyvps)" required />
-        <input type="text" id="domain" placeholder="Domain (ex: domainkamu.com)" required />
-        <select id="paket" required>
-          <option value="" disabled selected>Pilih Paket VPS</option>
-          <option value="Mini">Mini - Rp25.000</option>
-          <option value="Medium">Medium - Rp30.000</option>
-          <option value="Pro">Pro - Rp35.000</option>
-        </select>
-        <input type="text" id="promo" placeholder="Kode Promo (opsional)" />
-        <div id="total">Total: Rp0</div>
-        <button type="submit" class="btn">Pesan Sekarang</button>
-      </form>
-      <div class="payment-info">
-        <h3>Metode Pembayaran</h3>
-        <p>Transfer via DANA:</p>
-        <div class="rekening">0812-2748-0576 (a.n. Duta)</div>
-        <p>Scan QRIS ORKUT:</p>
-        <img src="https://files.catbox.moe/zl8wv0.jpg" alt="QRIS DANA" />
-      </div>
-    </div>
-  </section>
-
-  <footer>
-    <p>&copy; 2025 Kenny Hosting. All rights reserved.</p>
-  </footer>
-
-  <script src="assets/script.js"></script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
